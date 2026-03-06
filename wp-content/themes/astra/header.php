@@ -31,6 +31,14 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
 <?php wp_head(); ?>
 <?php astra_head_bottom(); ?>
 </head>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+    body, h1, h2, h3, h4, h5, h6, .site-title, .main-navigation a { font-family: 'Outfit', sans-serif !important; }
+    .custom-logo { max-height: 60px !important; width: auto !important; }
+    .ast-site-identity { flex: 1; display: flex; align-items: center; }
+    .main-header-bar { padding: 10px 0 !important; }
+    .ast-container { max-width: 1200px !important; }
+</style>
 
 <body <?php astra_schema_body(); ?> <?php body_class(); ?>>
 <?php astra_body_top(); ?>
@@ -43,20 +51,48 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         .splash-text { color: #fff; font-family: sans-serif; margin-top: 20px; font-weight: bold; letter-spacing: 2px; }
         
-        /* PETZ INSPIRED CUSTOM CSS */
-        .main-header-bar { border-bottom: 4px solid #FFCC00 !class; }
-        .ast-button, .woocommerce-button, .single_add_to_cart_button { background-color: #FFCC00 !important; color: #004A99 !important; font-weight: bold !important; border-radius: 50px !important; }
-        .ast-button:hover, .woocommerce-button:hover, .single_add_to_cart_button:hover { background-color: #ffd633 !important; }
-        .ast-site-identity .site-title a { color: #fff !important; }
-        .main-navigation a { color: #fff !important; font-weight: 600 !important; }
+        /* FORCE UI OVERHAUL */
+        img.custom-logo, .site-logo-img img { max-height: 60px !important; width: auto !important; }
+        .main-header-bar { border-bottom: 4px solid #FFCC00 !important; padding: 10px 0 !important; }
+        .ast-button, .woocommerce-button, .single_add_to_cart_button, .woocommerce-mini-cart__buttons a { background-color: #FFCC00 !important; color: #004A99 !important; font-weight: bold !important; border-radius: 50px !important; text-transform: uppercase !important; letter-spacing: 1px !important; border: none !important; transition: all 0.3s ease !important; }
+        .ast-button:hover, .woocommerce-button:hover, .single_add_to_cart_button:hover, .woocommerce-mini-cart__buttons a:hover { background-color: #ffd633 !important; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4) !important; }
+        .ast-site-identity .site-title a { color: #fff !important; font-size: 1.5rem !important; margin-left: 10px !important; font-family: 'Outfit', sans-serif !important; }
+        .main-navigation a { color: #fff !important; font-weight: 600 !important; font-size: 1rem !important; font-family: 'Outfit', sans-serif !important; }
         .ast-primary-header-bar { background-color: #004A99 !important; }
         
-        .premium-hero { background: linear-gradient(135deg, #004A99 0%, #002D5E 100%); color: #fff; padding: 60px 20px; text-align: center; border-bottom: 5px solid #FFCC00; border-radius: 0 0 50px 50px; margin-bottom: 40px; }
-        .premium-hero h1 { font-size: 3rem; margin-bottom: 10px; color: #FFCC00; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        .premium-hero p { font-size: 1.25rem; opacity: 0.9; }
+        .premium-hero { background: linear-gradient(135deg, #004A99 0%, #002D5E 100%); color: #fff; padding: 100px 20px; text-align: center; border-bottom: 5px solid #FFCC00; border-radius: 0 0 50px 50px; margin-bottom: 60px; font-family: 'Outfit', sans-serif !important; }
+        .premium-hero h1 { font-size: 4rem !important; margin-bottom: 20px !important; color: #FFCC00 !important; text-shadow: 3px 3px 6px rgba(0,0,0,0.4) !important; font-weight: 800 !important; }
+        .premium-hero p { font-size: 1.5rem !important; opacity: 0.95; max-width: 800px; margin: 0 auto !important; }
         
-        [data-wp-dark-mode-active] .premium-hero { background: #111; border-color: #444; }
-        [data-wp-dark-mode-active] .ast-primary-header-bar { background-color: #1a1a1a !important; }
+        /* WooCommerce Grid Overhaul */
+        .woocommerce ul.products li.product { background: #fff !important; border-radius: 20px !important; padding: 20px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important; transition: all 0.3s ease !important; border: 1px solid #eee !important; margin-bottom: 30px !important; }
+        .woocommerce ul.products li.product:hover { transform: translateY(-10px) !important; box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important; }
+        .woocommerce ul.products li.product img { border-radius: 15px !important; margin-bottom: 15px !important; }
+        .woocommerce ul.products li.product .woocommerce-loop-product__title { font-size: 1.2rem !important; color: #004A99 !important; font-weight: 700 !important; height: 3em; overflow: hidden; font-family: 'Outfit', sans-serif !important; }
+        .woocommerce ul.products li.product .price { color: #ff0000 !important; font-weight: 800 !important; font-size: 1.3rem !important; }
+        
+        /* FOOTER BRANDING FIX */
+        .ast-footer-copyright { display: none !important; }
+        .custom-digifood-footer { text-align: center; padding: 20px; background: #f9f9f9; color: #666; font-size: 0.9rem; font-family: 'Outfit', sans-serif !important; border-top: 1px solid #eee; }
+        
+        /* DARK MODE REMAP - KILL THE RED MESS */
+        [data-wp-dark-mode-active] body, 
+        [data-wp-dark-mode-active] .site,
+        [data-wp-dark-mode-active] #page { 
+            background-color: #121212 !important; 
+            color: #e0e0e0 !important; 
+            filter: none !important; 
+        }
+        [data-wp-dark-mode-active] .premium-hero { background: #1a1a1a !important; border-color: #333 !important; }
+        [data-wp-dark-mode-active] .ast-primary-header-bar { background-color: #000000 !important; }
+        [data-wp-dark-mode-active] .woocommerce ul.products li.product { background: #1e1e1e !important; border-color: #333 !important; }
+        [data-wp-dark-mode-active] .woocommerce ul.products li.product .woocommerce-loop-product__title { color: #fff !important; }
+        [data-wp-dark-mode-active] .custom-digifood-footer { background: #000 !important; color: #888 !important; border-color: #222 !important; }
+        [data-wp-dark-mode-active] .premium-hero h1 { color: #FFCC00 !important; }
+        
+        /* Ensure the red overlay from the plugin is nuked */
+        .wp-dark-mode-active { filter: none !important; }
+        div[class*="wp-dark-mode-"] { filter: none !important; }
     </style>
     <div class="loader"></div>
     <div class="splash-text">DIGIFOOD STORE</div>
@@ -103,6 +139,15 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
 	astra_header();
 
 	astra_header_after();
+
+    // CUSTOM FOOTER OVERRIDE - Hard-coded in body to ensure visibility
+    add_action('wp_footer', function() {
+        ?>
+        <div class="custom-digifood-footer">
+            Copyright © 2026 Digifood Store | Digifood By Digifood Developers
+        </div>
+        <?php
+    }, 999);
 
 	// HERO SECTION FOR HOME (SHOP)
 	if ( is_shop() || is_front_page() ) {
