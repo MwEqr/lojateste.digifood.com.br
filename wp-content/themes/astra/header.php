@@ -59,7 +59,7 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
         [data-wp-dark-mode-active] .ast-primary-header-bar { background-color: #1a1a1a !important; }
     </style>
     <div class="loader"></div>
-    <div class="splash-text">LOJA PREMIUM</div>
+    <div class="splash-text">DIGIFOOD STORE</div>
 </div>
 <script>
     window.addEventListener('load', function() {
