@@ -1,0 +1,178 @@
+/*
+Theme Name: Astra Petz Clone
+Theme URI: https://encrypthost.com.br/
+Template: astra
+Author: EncryptHost AI
+Description: Um tema premium estilo Petz com funcionalidades exclusivas.
+Version: 1.0.0
+*/
+
+:root {
+  --petz-blue: #0056b3;
+  --petz-yellow: #fcd34d;
+  --petz-bg: #f8f8fb;
+}
+
+body {
+  font-family: 'Open Sans', 'Lato', sans-serif !important;
+  background-color: var(--petz-bg);
+}
+
+/* Header Premium */
+.petz-header {
+  background: white;
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.petz-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.petz-logo {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--petz-blue);
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.petz-search {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 40px;
+  position: relative;
+}
+
+.petz-search input {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 99px;
+  border: 1px solid #ddd;
+  background: #fcfcfc;
+  font-size: 1rem;
+}
+
+.petz-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.petz-nav-cats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+  background: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #eee;
+}
+
+.petz-nav-cats a {
+  color: #333;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.petz-nav-cats a:hover {
+  color: var(--petz-blue);
+}
+
+/* Banner Assinatura */
+.petz-signature-banner {
+  background: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Categorias Grid */
+.petz-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  max-width: 1280px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.petz-cat-item {
+  background: #f1f1f1;
+  border-radius: 12px;
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.petz-cat-item:hover {
+  transform: translateY(-5px);
+  background: #e6e6e6;
+}
+
+/* Hero */
+.petz-hero {
+  background: #50b090;
+  border-radius: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.petz-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+/* Splash Screen (Obg) */
+#nexus-splash {
+  position: fixed;
+  inset: 0;
+  background: var(--petz-blue);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  transition: 0.6s opacity, 0.6s transform;
+}
+
+#nexus-splash.fade-out {
+  opacity: 0;
+  transform: scale(1.1);
+  pointer-events: none;
+}
+
+.splash-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  margin-bottom: 20px;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Fixes Astra */
+.ast-container { max-width: 1280px !important; }
+.site-header { display: none !important; } /* Hide default */
