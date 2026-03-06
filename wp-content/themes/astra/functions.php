@@ -12,6 +12,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+// TRANSLATION OVERRIDE HOOK
+add_filter( 'gettext', function( $translated_text, $text, $domain ) {
+    if ( $text === 'Showing all %d results' ) return 'Mostrando todos os %d resultados';
+    if ( $text === 'Default sorting' ) return 'Ordenação padrão';
+    if ( $text === 'Read more' ) return 'Leia mais';
+    if ( $text === 'Add to cart' ) return 'Comprar';
+    if ( $text === 'Sort by popularity' ) return 'Ordenar por popularidade';
+    if ( $text === 'Sort by average rating' ) return 'Ordenar por classificação média';
+    if ( $text === 'Sort by latest' ) return 'Ordenar por mais recentes';
+    if ( $text === 'Sort by price: low to high' ) return 'Ordenar por preço: menor para maior';
+    if ( $text === 'Sort by price: high to low' ) return 'Ordenar por preço: maior para menor';
+    if ( $text === 'Showing the single result' ) return 'Mostrando o único resultado';
+    return $translated_text;
+}, 20, 3 );
+
+
 /**
  * Define Constants
  */

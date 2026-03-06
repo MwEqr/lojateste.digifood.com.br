@@ -60,9 +60,9 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
         .main-navigation a { color: #fff !important; font-weight: 600 !important; font-size: 1rem !important; font-family: 'Outfit', sans-serif !important; }
         .ast-primary-header-bar { background-color: #004A99 !important; }
         
-        .premium-hero { background: linear-gradient(135deg, #004A99 0%, #002D5E 100%); color: #fff; padding: 100px 20px; text-align: center; border-bottom: 5px solid #FFCC00; border-radius: 0 0 50px 50px; margin-bottom: 60px; font-family: 'Outfit', sans-serif !important; }
-        .premium-hero h1 { font-size: 4rem !important; margin-bottom: 20px !important; color: #FFCC00 !important; text-shadow: 3px 3px 6px rgba(0,0,0,0.4) !important; font-weight: 800 !important; }
-        .premium-hero p { font-size: 1.5rem !important; opacity: 0.95; max-width: 800px; margin: 0 auto !important; }
+        .premium-hero { background: url('/wp-content/uploads/2026/03/generic_banner_bg_1772771562448.png') no-repeat center center; background-size: cover; color: #fff; padding: 140px 20px; text-align: center; border-bottom: 5px solid #FFCC00; border-radius: 0 0 50px 50px; margin-bottom: 60px; font-family: 'Outfit', sans-serif !important; box-shadow: inset 0 0 100px rgba(0,0,0,0.7); }
+        .premium-hero h1 { font-size: 4rem !important; margin-bottom: 20px !important; color: #FFCC00 !important; text-shadow: 4px 4px 10px rgba(0,0,0,0.8) !important; font-weight: 800 !important; }
+        .premium-hero p { font-size: 1.5rem !important; opacity: 1; max-width: 800px; margin: 0 auto !important; text-shadow: 2px 2px 5px rgba(0,0,0,0.8) !important; font-weight: 600 !important; }
         
         /* WooCommerce Grid Overhaul */
         .woocommerce ul.products li.product { background: #fff !important; border-radius: 20px !important; padding: 20px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important; transition: all 0.3s ease !important; border: 1px solid #eee !important; margin-bottom: 30px !important; }
@@ -146,6 +146,14 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
         <div class="custom-digifood-footer">
             Copyright © 2026 Digifood Store | Digifood By Digifood Developers
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var resultsCount = document.querySelector('.woocommerce-result-count');
+                if (resultsCount && resultsCount.innerHTML.includes('Showing all')) {
+                    resultsCount.innerHTML = resultsCount.innerHTML.replace('Showing all', 'Mostrando todos os').replace('results', 'resultados');
+                }
+            });
+        </script>
         <?php
     }, 999);
 
@@ -154,8 +162,8 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
 		?>
 		<section class="premium-hero">
 			<div class="ast-container">
-				<h1>Tudo o que seu pet precisa!</h1>
-				<p>Produtos selecionados com carinho para o seu melhor amigo.</p>
+				<h1>Os melhores produtos digitais!</h1>
+				<p>Soluções completas e genéricas selecionadas para você.</p>
 				<a href="#main" class="ast-button" style="margin-top:20px;">Ver Ofertas</a>
 			</div>
 		</section>
